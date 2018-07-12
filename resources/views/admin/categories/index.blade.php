@@ -1,5 +1,3 @@
-
-
 @extends('admin.layouts.app_admin')
 
 @section('content')
@@ -26,7 +24,7 @@
       <td>{{$category->title}}</td>
       <td>{{$category->published}}</td>
       <td>
-        <a href="{{route('admin.category.edit',['id'=>$category->id])}}">
+        <a href="{{route('admin.category.edit',$category)}}">
           <i class="fa fa-edit"></i>
         </a>
       </td>
@@ -43,7 +41,7 @@
     <tr>
       <td colspan="3">
         <ul class="pagination pull-right">
-          {{$categories->link}}
+          {{$categories->links()}}
         </ul>
       </td>
     </tr>
